@@ -18,7 +18,7 @@ export const authOptions = {
     }),
     CredentialsProvider({
       name: "Credentials",
-      Credentials: {},
+      // Credentials: {},
 
       credentials: {
         username: {

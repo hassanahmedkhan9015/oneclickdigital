@@ -6,7 +6,14 @@
   background-image: url(../../public/assets/banner_bg.jpg);
 }
 
-/* Plains-Background-Set */
+/* Hero-Main-BG  */
+.hero-main {
+  background-image: url("../../public/assets/Background/heromainbg.svg");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
 
 /* Footer-Background-Set */
 .bg-image-two {
@@ -43,7 +50,7 @@
     transform: translateX(-50%);
   }
 }
-.plain-bg{
+.plain-bg {
   background-image: url("../../public/assets/Background/aeroplane.svg");
   background-size: cover;
   background-position-y: center;

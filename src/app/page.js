@@ -1,10 +1,10 @@
-import Cards from "./components/layout/Cards";
-import Hero from "./components/layout/Hero";
+import Cards from "./components/ui/Cards";
+import HeroMain from "./components/ui/HeroMain";
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HeroMain />
       <Cards />
     </>
   );
