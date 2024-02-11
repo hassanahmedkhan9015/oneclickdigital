@@ -19,7 +19,7 @@ const HeroMain = () => {
         <div className="flex flex-col justify-center items-center lg:items-start">
           <div>
             <p className="text-black text-2xl font-semibold font-sans">
-              Let's find the
+              Let&apos;s find the
             </p>
             <h1 className="text-4xl text-black font-extrabold mt-3">
               Best <span className="text-blue-500">1ClickDigital Plan</span>
