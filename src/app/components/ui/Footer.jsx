@@ -33,7 +33,7 @@ function Footer() {
 
                 <p className="max-w-sm mt-2 text-black dark:text-gray-400">
                   OneClick Digital Offers customized insurance solutions to meet
-                  your specific needs, whether it's for your home, car, health,
+                  your specific needs, whether it&apos;s for your home, car, health,
                   business, or life. We work with you to create a policy that
                   fits your unique situation.
                 </p>
@@ -141,18 +141,11 @@ function Footer() {
                     Secured By
                   </h3>
                   <span className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">
-                    <img
-                      className="w-24 h-7"
-                      src="https://merakiui.com/images/full-logo.svg"
-                      alt="merakUI"
-                    />
+                  <Image src={Union} alt="Union_Pay" className="w-16" />
+                   
                   </span>
                   <span className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">
-                    <img
-                      className="w-24 h-7"
-                      src="https://merakiui.com/images/full-logo.svg"
-                      alt="merakUi"
-                    />
+                  <Image src={Union} alt="Union_Pay" className="w-16" />
                   </span>
                 </div>
                 {/* ContactUs  */}

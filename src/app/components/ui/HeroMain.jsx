@@ -25,7 +25,7 @@ const HeroMain = () => {
               Best <span className="text-blue-500">1ClickDigital Plan</span>
             </h1>
             <p className="mt-1 text-gray-600 font-sans font-semibold">
-              Pakistan's only Digital OneClickDigital Solution for All
+              Pakistan&apos;s only Digital OneClickDigital Solution for All
             </p>
 
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start mt-5">

@@ -2,7 +2,7 @@
 import { mailAction } from "@/app/components/action/mailAction";
 import React, { useState } from "react";
 
-function page() {
+function ForgotPass() {
   
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -31,7 +31,7 @@ function page() {
               Forgot Your Password?
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-              Please enter your email address. We'll send you a password reset
+              Please enter your email address. We&apos;ll send you a password reset
               link.
             </p>
           </div>
@@ -57,14 +57,14 @@ function page() {
               {message === "success" && (
                 <>
                   <p className="text-xs text-green-500 font-sans">
-                    Successfully sent check your email{" "}
+                    Successfully sent check your email
                   </p>
                 </>
               )}
               {message === "unsuccess" && (
                 <>
                   <p className="text-xs text-red-500 font-sans">
-                    User not Exixts{" "}
+                    User not Exists
                   </p>
                 </>
               )}
@@ -99,4 +99,4 @@ function page() {
   );
 }
 
-export default page;
+export default ForgotPass;
