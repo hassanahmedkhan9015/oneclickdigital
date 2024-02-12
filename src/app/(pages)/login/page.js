@@ -51,21 +51,17 @@ function Login() {
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 items-center mx-28 my-10">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 items-center mx-4 md:mx-8 lg:mx-28 my-10">
         <Toaster />
-        {/* Image-Section  */}
-
-        <div className="  hidden md:hidden sm:hidden lg:block xl:block mx-auto">
-          <div>
-            <Image src={SideBg} alt="side_bg" />
-          </div>
+        {/* Image Section */}
+        <div className="hidden lg:block xl:block mx-auto">
+          <Image src={SideBg} alt="side_bg" />
         </div>
 
-        {/* Form-Section  */}
-        <div className="m-auto ">
-          {" "}
+        {/* Form Section */}
+        <div className="m-auto">
           <form
-            className="bg-white p-8 rounded-lg shadow-lg py-7 w-96 border border-blue-400"
+            className="bg-white p-8 rounded-lg shadow-lg py-7 w-full md:w-96 lg:w-96 border border-blue-400"
             onSubmit={handleSubmit}
           >
             <h1 className="flex items-center justify-center text-2xl font-sans font-bold text-blue-500">
@@ -110,7 +106,6 @@ function Login() {
             </div>
             {authStatus === "error" && (
               <p className="mt-4 text-xs text-red-500 ">
-                {" "}
                 Sorry, your password was incorrect
               </p>
             )}
@@ -150,9 +145,7 @@ function Login() {
               </Link>
               <span className="w-1/5 border-b dark:border-gray-400 md:w-1/4"></span>
             </div>
-
           </form>
-
         </div>
       </div>
     </>

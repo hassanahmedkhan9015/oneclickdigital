@@ -10,6 +10,9 @@ import ClaimCard from "../Reauseable/Cards";
 const Cards = () => {
   return (
     <>
+      <h1 className="text-center text-blue-500 font-sans font-extrabold text-3xl mt-4">
+      <span className="text-neutral-500">Why</span> OneClickDigital?
+      </h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-12">
         <ClaimCard
           imageSrc={Claim}
