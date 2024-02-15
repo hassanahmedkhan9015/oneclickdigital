@@ -23,6 +23,17 @@
   background-position-x: center;
   background-repeat: no-repeat;
 }
+
+/* About-Background-Set */
+.about-bg {
+  background-image: url("../../public/assets/Background/aboutbg.svg");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
+
 /* Slider-CSS  */
 .slide {
   margin-left: 2%;

@@ -1,8 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/ui/Header";
 import AppProvider from "./components/AppContext";
-import Footer from "./components/ui/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +16,7 @@ export default function RootLayout({ children }) {
         {/* <main className="max-w-5xl mx-auto max-h-screen"> */}
         <main>
           <AppProvider>
-            <Header />
             {children}
-            <Footer />
           </AppProvider>
         </main>
       </body>

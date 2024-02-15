@@ -14,12 +14,13 @@ const Plains = () => {
     <>
       <div className="slider-container overflow-hidden  max-w-4xl m-auto mb-10 plain-bg ">
         <div className="text-center mb-8">
-          <h1 className="text-blue-400 text-lg font-sans mb-3">
+          {/* <h1 className="text-blue-400 text-lg font-sans mb-3">
             Our Community
-          </h1>
-          <h1 className="text-3xl font-bold text-gray-600 font-sans">
+          </h1> */}
+          <h1 className="text-3xl font-bold text-neutral-500 font-sans">
             {" "}
             OUR PROUD PARTNERS
+            
           </h1>
         </div>
         <div className="slider flex">

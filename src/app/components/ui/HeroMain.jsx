@@ -21,7 +21,7 @@ const HeroMain = () => {
             <p className="text-black text-2xl font-semibold font-sans">
               Let&apos;s find the
             </p>
-            <h1 className="text-4xl text-black font-extrabold mt-3">
+            <h1 className="text-4xl text-neutral-500 font-extrabold mt-3 font-sans">
               Best <span className="text-blue-500">1ClickDigital Plan</span>
             </h1>
             <p className="mt-1 text-gray-600 font-sans font-semibold">

@@ -55,17 +55,18 @@ function Header() {
                   >
                     Takaful & Insurance
                   </Link>
+                
                   <Link
-                    href={"/"}
-                    className="text-white transition hover:text-slate-300 "
-                  >
-                    Contact
-                  </Link>
-                  <Link
-                    href={"/"}
+                    href={"/about"}
                     className="text-white transition hover:text-slate-300 "
                   >
                     About
+                  </Link>
+                  <Link
+                    href={"/contact"}
+                    className="text-white transition hover:text-slate-300 "
+                  >
+                    Contact
                   </Link>
                   <Link
                     href={"/"}
@@ -92,7 +93,7 @@ function Header() {
                         onClick={() => {
                           signOut();
                         }}
-                        className="inline-block rounded-md text-sm bg-white px-5 py-2.5 text-sm font-medium  transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring hover:bg-blue-600 hover:text-white"
+                        className="inline-block rounded-md text-sm bg-white px-5 py-2.5 font-medium  transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring hover:bg-blue-600 hover:text-white"
                       >
                         Logout
                       </button>
