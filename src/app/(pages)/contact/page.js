@@ -19,10 +19,10 @@ function page() {
             At <span className="text-blue-500">OneClickDigital</span> , it is
             our constant endeavor to provide a great customer experience.
             Whether you have questions about our services, need assistance with
-            your account, or simply want to provide feedback, we're here to
+            your account, or simply want to provide feedback, we&apos;re here to
             help. Our dedicated team is available to assist you with any
             inquiries you may have. Please feel free to reach out to us via
-            phone or email, and we'll ensure that your needs are addressed
+            phone or email, and we&apos;ll ensure that your needs are addressed
             promptly and efficiently. We value your feedback and look forward to
             serving you{" "}
           </p>
