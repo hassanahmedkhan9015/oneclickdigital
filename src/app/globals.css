@@ -33,6 +33,15 @@
   background-repeat: no-repeat;
 }
 
+/* Conceptual-Section-Bg  */
+.bg-concept{
+  background-image: url("../../public/assets/Background/contactbg.svg");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+}
+
 
 /* Slider-CSS  */
 .slide {

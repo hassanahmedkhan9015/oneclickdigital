@@ -6,7 +6,7 @@ import ContactIcon from "@public/assets/Icons/contact-icon.svg";
 function page() {
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mx-12 about-bg sm:mb-14 mb-5 md:mb-14">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mx-12 about-bg sm:mb-14 mb-5 md:mb-14 ">
         <div className="">
           <Image src={Contact} alt="contact_main_image" />
         </div>

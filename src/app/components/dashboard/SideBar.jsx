@@ -5,56 +5,48 @@ import { Drawer, ModalClose } from "@mui/joy";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import axios from "axios";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import PersonIcon from "@mui/icons-material/Person";
 
 function SideBar() {
-  const router = useRouter();
+  const pathName = usePathname();
   const [open, setOpen] = useState(false);
 
   const openDrawer = () => {
     setOpen("success");
   };
 
-  const handleUsers = async (e) => {
-    e.preventDefault();
-    await axios.get("/api/users").then((res) => console.log(res));
-    router.replace("/dashboard/invoice");
-  };
+  const tabs = [
+    { href: "/dashboard/partners", label: "Partners", icon: PeopleAltIcon },
+    { href: "/dashboard/profile", label: "Profile", icon: PersonIcon },
+    { href: "/", label: "Home", icon: PeopleAltIcon },
+  ];
 
   return (
     <>
-      <div className=" py-6 hidden md:block bg-blue-400 px-10 h-screen">
-        <div>Logo</div>
+      <div className="py-6 hidden md:block px-10 h-screen bg-gradient-to-b from-blue-600 via-blue-500 to-cyan-400">
+     
 
+        <Image src={DrawerLogo} alt="logo_icon" className=" w-20" />
+
+        {/* Desktop View (Hidden on Mobile) */}
         <ul className="mt-6 space-y-1">
-          <li>
-            <Link
-              onClick={handleUsers}
-              href={""}
-              className="block  px-4 py-2 text-sm font-medium text-gray-700"
+          {tabs.map((tab) => (
+            <li
+              key={tab.href}
+              className={`block px-3 py-2 text-sm font-medium font-sans ${
+                pathName === tab.href
+                  ? "active text-sky-600 shrink-0 rounded-md bg-sky-100 "
+                  : "text-white"
+              }`}
             >
-              User
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href={"/"}
-              className="block  px-4 py-2 text-sm font-medium text-gray-700"
-            >
-              General
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              href={"/"}
-              className="block  px-4 py-2 text-sm font-medium text-gray-700"
-            >
-              General
-            </Link>
-          </li>
+              <Link href={tab.href} className="items-center flex gap-1">
+                {/* Render the icon component directly */}
+                <tab.icon /> {tab.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -118,3 +110,5 @@ function SideBar() {
 }
 
 export default SideBar;
+
+

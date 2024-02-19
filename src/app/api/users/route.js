@@ -8,7 +8,7 @@ export async function GET(req, res) {
     await connectMongo();
     console.log("Mongo Connected");
     const user = await User.find();
-    return NextResponse.json({ user });
+    return NextResponse.json(user);
 
   } catch (error) {
     console.error(error);

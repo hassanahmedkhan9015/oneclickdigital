@@ -5,8 +5,12 @@ import Auto from "@public/assets/Hero/auto.svg";
 import Travel from "@public/assets/Hero/travel.svg";
 import Health from "@public/assets/Hero/health.svg";
 import Family from "@public/assets/Hero/family.svg";
-import Image from "next/image";
+import Home from "@public/assets/Hero/home.svg";
+import Tracker from "@public/assets/Hero/tracker.svg";
+import Bike from "@public/assets/Hero/bike.svg";
+import Life from "@public/assets/Hero/life.svg";
 import "@/app/globals.css";
+import IconCard from "../Reauseable/IconCard";
 const HeroMain = () => {
   return (
     <>
@@ -27,62 +31,29 @@ const HeroMain = () => {
             <p className="mt-1 text-gray-600 font-sans font-semibold">
               Pakistan&apos;s only Digital OneClickDigital Solution for All
             </p>
-
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start mt-5">
-              {/* Auto */}
-              <div className="w-24 h-24 flex flex-col justify-center text-gray-800 hover:border-blue-400 items-center relative rounded-xl overflow-hidden border border-gray-300 group bg-neutral-50 shadow-md duration-500">
-                <Image
-                  src={Auto}
-                  className="absolute z-10 w-full blur-md fill-blue-300 duration-500 group-hover:blur-none group-hover:scale-105"
-                  alt="auto_image"
-                />
-                <div className="z-20 flex flex-col justify-center items-center">
-                  <span className="font-semibold font-sans text-lg ml-2 opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                    Auto
-                  </span>
-                </div>
+            <div className="block">
+              {/* 4 cards  */}
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start mt-5">
+                {/* Tracker  */}
+                <IconCard src={Tracker} alt="tracker_icon" title="Tracker" />
+                {/* Auto */}
+                <IconCard src={Auto} alt="auto_icon" title="Auto" />
+                {/* Bike  */}
+                <IconCard src={Bike} alt="bike_icon" title="Bike" />
+                {/* Health */}
+                <IconCard src={Health} alt="health_icon" title="Health" />
               </div>
 
-              {/* Travel */}
-              <div className="w-24 h-24 flex flex-col justify-center text-gray-800 hover:border-blue-400 items-center relative rounded-xl overflow-hidden border border-gray-300 group bg-neutral-50 shadow-md duration-500">
-                <Image
-                  src={Travel}
-                  className="absolute z-10 w-full blur-md fill-blue-300 duration-500 group-hover:blur-none group-hover:scale-105"
-                  alt="travel_icon"
-                />
-                <div className="z-20 flex flex-col justify-center items-center">
-                  <span className="font-semibold font-sans text-lg ml-2 opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                    Travel
-                  </span>
-                </div>
-              </div>
-
-              {/* Health */}
-              <div className="w-24 h-24 flex flex-col justify-center text-gray-800 hover:border-blue-400 items-center relative rounded-xl overflow-hidden border border-gray-300 group bg-neutral-50 shadow-md duration-500">
-                <Image
-                  src={Health}
-                  className="absolute z-10 w-full blur-md fill-blue-300 duration-500 group-hover:blur-none group-hover:scale-105"
-                  alt="health_icon"
-                />
-                <div className="z-20 flex flex-col justify-center items-center">
-                  <span className="font-semibold font-sans text-lg ml-2 opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                    Health
-                  </span>
-                </div>
-              </div>
-
-              {/* Family */}
-              <div className="w-24 h-24 flex flex-col justify-center text-gray-800 hover:border-blue-400 items-center relative rounded-xl overflow-hidden border border-gray-300 group bg-neutral-50 shadow-md duration-500">
-                <Image
-                  src={Family}
-                  className="absolute z-10 w-full blur-md fill-blue-300 duration-500 group-hover:blur-none group-hover:scale-105"
-                  alt="family_icon"
-                />
-                <div className="z-20 flex flex-col justify-center items-center">
-                  <span className="font-semibold font-sans text-lg ml-2 opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                    Family
-                  </span>
-                </div>
+              {/* 4 Cards  */}
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start mt-5">
+                {/* Family */}
+                <IconCard src={Family} alt="family_icon" title="Family" />
+                {/* Travel */}
+                <IconCard src={Travel} alt="travel_icon" title="Travel" />
+                {/* Life  */}
+                <IconCard src={Life} alt="life_icon" title="Life" />
+                {/* Home  */}
+                <IconCard src={Home} alt="home_icon" title="Home" />
               </div>
             </div>
           </div>
