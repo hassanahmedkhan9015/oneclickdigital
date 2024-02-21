@@ -14,6 +14,7 @@ const UserSchema = new Schema(
     city: { type: String, require:false},
     country: { type: String, require:false },
     verifyToken: { type: String, require: false },
+    admin:{ type:Boolean, require:false, default:false}
   },
   { timestamps: true }
 );

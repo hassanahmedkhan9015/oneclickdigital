@@ -34,9 +34,9 @@
 }
 
 /* Conceptual-Section-Bg  */
-.bg-concept{
-  background-image: url("../../public/assets/Background/contactbg.svg");
-  background-size: cover;
+.bg-conceptual{
+  background-image: url("../../public/assets/Background/concepbg.svg");
+  background-size: contain;
   background-position-y: center;
   background-position-x: center;
   background-repeat: no-repeat;

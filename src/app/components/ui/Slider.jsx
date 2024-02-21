@@ -3,10 +3,11 @@ import Image from "next/image";
 import SlideTwo from "@public/assets/Hero/herotwo.svg";
 import SlideThree from "@public/assets/Hero/herothree.svg";
 import SlideFour from "@public/assets/Hero/herofour.svg";
+import SlideOne from "@public/assets/Hero/heroone.svg";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const slides = [SlideTwo, SlideThree, SlideFour];
+  const slides = [SlideTwo, SlideThree,SlideOne, SlideFour];
   const changeTime = 4000; // Change image every 4 seconds (4000 milliseconds)
 
   useEffect(() => {

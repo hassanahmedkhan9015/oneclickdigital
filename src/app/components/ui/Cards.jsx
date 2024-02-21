@@ -10,26 +10,27 @@ import ClaimCard from "../Reauseable/Cards";
 const Cards = () => {
   return (
     <>
-      <h1 className="text-center text-blue-500 font-sans font-extrabold text-3xl mt-4">
-      <span className="text-neutral-500">Why</span> OneClickDigital?
+      {/* <h1 className="text-center text-blue-500 font-sans font-extrabold text-3xl mt-4"> */}
+      <h1 className="text-3xl  text-center text-blue-500  font-extrabold sm:text-4xl font-sans">
+        <span className="text-neutral-500">Why</span> Oneclick Digital?
       </h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-12">
         <ClaimCard
           imageSrc={Claim}
           title="Claims Assistance"
-          description="Each OneClickDigital subscription includes comprehensive claims support at every stage, guaranteeing prompt assistance whenever necessary."
+          description="Excels in simplifying and expediting insurance claims through a user-friendly digital platform, providing efficient and hassle-free claim assistance services."
         />
 
         <ClaimCard
           imageSrc={Docs}
           title="Minimal Documentation"
-          description="focuses on your ease and convenience, with minimal documents"
+          description="Simplifying insurance with minimal documentation reduces paperwork for an efficient and streamlined customer experience."
         />
 
         <ClaimCard
           imageSrc={Emergency}
           title="24/7 Emergency Help"
-          description="Through our website and helpline team, we are always there to answer your questions and offer help"
+          description="24/7 emergency assistance through a reliable digital platform, ensuring prompt support for customers in critical situations and enhancing peace of mind during unforeseen events."
         />
       </div>
 
@@ -38,19 +39,19 @@ const Cards = () => {
         <ClaimCard
           imageSrc={Transparency}
           title="Transparent Work"
-          description="We give clear, succinct and complete data to our clients"
+          description="Prioritizes transparency in its operations, fostering clarity and honesty in all interactions through its digital platform."
         />
 
         <ClaimCard
           imageSrc={Simple}
           title="Simple and Easy To Use"
-          description="Our quick and simple process is designed to ensure that you get your policy with the least amount of hassle"
+          description="Simple and easy-to-use platform for a seamless insurance experience."
         />
 
         <ClaimCard
           imageSrc={Compotetive}
           title="Reasonable Rates"
-          description="The best market rates guarantee that our clients make out really well"
+          description="Affordable rates without compromising quality coverage."
         />
       </div>
     </>

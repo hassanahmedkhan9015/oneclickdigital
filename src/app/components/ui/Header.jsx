@@ -3,14 +3,21 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import React, { useState } from "react";
 import "@/app/globals.css";
-import { Drawer } from "@mui/joy";
+import {
+  Drawer,
+  Dropdown,
+  Menu,
+  MenuButton,
+  MenuItem,
+  ModalClose,
+} from "@mui/joy";
 import Navbar from "./Navbar";
 import Image from "next/image";
 import Logo from "@public/assets/Logo/logo-white.svg";
 import DrawerLogo from "@public/assets/Logo/main-logo.svg";
-
 import Mail from "@public/assets/mail.svg";
 import Phone from "@public/assets/phone.svg";
+import { ArrowDropDown } from "@mui/icons-material";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -28,6 +35,22 @@ function Header() {
   const openDrawer = () => {
     setOpen("success");
   };
+
+  const dropsLink = [
+    { href: "/auto", label: "Auto" },
+    { href: "/bike", label: "Bike" },
+    { href: "/health", label: "Health" },
+    { href: "/family", label: "Family" },
+    { href: "/travel", label: "Travel" },
+    { href: "/life", label: "Life" },
+    { href: "/home", label: "Home" },
+    { href: "/tracker", label: "Tracker" },
+  ];
+  const navLinks = [
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+    { href: "/faqs", label: "FAQs" },
+  ];
   return (
     <>
       <Navbar />
@@ -49,31 +72,37 @@ function Header() {
                   >
                     Home
                   </Link>
-                  <Link
-                    href={"/"}
-                    className="text-white transition hover:text-slate-300 "
-                  >
-                    Takaful & Insurance
-                  </Link>
-                
-                  <Link
-                    href={"/about"}
-                    className="text-white transition hover:text-slate-300 "
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href={"/contact"}
-                    className="text-white transition hover:text-slate-300 "
-                  >
-                    Contact
-                  </Link>
-                  <Link
-                    href={"/"}
-                    className="text-white transition hover:text-slate-300 "
-                  >
-                    FAQs
-                  </Link>
+
+                  <Dropdown>
+                    <MenuButton
+                      variant="plain"
+                      size="sm"
+                      endDecorator={<ArrowDropDown />}
+                      className="text-sm font-sans text-white hover:bg-transparent hover:text-slate-300"
+                    >
+                      Takaful & Insurance
+                    </MenuButton>
+                    <Menu size="sm">
+                      {dropsLink.map((drop) => (
+                        <>
+                          <Link href={drop.href} className="px-4 ">
+                            <MenuItem>{drop.label}</MenuItem>
+                          </Link>
+                        </>
+                      ))}
+                    </Menu>
+                  </Dropdown>
+
+                  {navLinks.map((link) => (
+                    <>
+                      <Link
+                        href={link.href}
+                        className="text-white transition hover:text-slate-300 "
+                      >
+                        {link.label}
+                      </Link>
+                    </>
+                  ))}
                 </ul>
               </nav>
             </div>
@@ -121,6 +150,7 @@ function Header() {
                   </>
                 )}
               </div>
+
               {/* Toggle-Btn  */}
               <div className="block md:hidden">
                 <button
@@ -150,127 +180,68 @@ function Header() {
                 {open === "success" && (
                   <>
                     <Drawer open={open} onClose={() => setOpen(false)}>
+                      <ModalClose />
                       <div className="flex h-screen flex-col justify-between border-e bg-white">
                         <div className="">
                           <Image
                             src={DrawerLogo}
                             alt="Logo"
                             width={100}
-                            className="mx-2"
+                            className="mx-5"
                           />
 
-                          <ul className="mt-6 space-y-1 ">
+                          <ul className="mt-6 px-6 space-y-4 text-md font-semibold text-black font-sans">
                             <li>
                               <Link
                                 href={"/"}
-                                className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-700 "
+                                className="block hover:text-blue-500"
                               >
                                 Home
                               </Link>
                             </li>
+
                             <li>
                               <details className="group [&_summary::-webkit-details-marker]:hidden">
-                                <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 hover:bg-gray-100 hover:text-gray-700">
-                                  <Link
-                                    href={"/"}
-                                    className=" font-medium text-sm"
-                                  >
-                                    Takaful & Insurance
-                                  </Link>
-
-                                  <span className="shrink-0 transition duration-300 group-open:-rotate-180">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="h-5 w-5"
-                                      viewBox="0 0 20 20"
-                                      fill="currentColor"
-                                    >
-                                      <path
-                                        fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"
-                                      />
-                                    </svg>
-                                  </span>
+                                <summary className="flex cursor-pointer items-center   hover:text-blue-500">
+                                  Takaful & Insurance <ArrowDropDown />
                                 </summary>
 
-                                <ul className="mt-2 space-y-1 px-4 text-sm">
-                                  <li>
+                                {dropsLink.map((drop) => (
+                                  <>
                                     <Link
-                                      href="/insurance/car"
-                                      className=" text-sm block rounded-lg px-4 py-2  font-medium hover:bg-gray-100 hover:text-gray-700"
+                                      href={drop.href}
+                                      className="block  hover:text-blue-500 text-black my-2 px-6"
                                     >
-                                      Car Insurance
+                                      {drop.label}
                                     </Link>
-                                    <Link
-                                      href="/insurance/car"
-                                      className=" text-sm block rounded-lg px-4 py-2  font-medium hover:bg-gray-100 hover:text-gray-700"
-                                    >
-                                      Bike Insurance
-                                    </Link>
-                                    <Link
-                                      href="/insurance/car"
-                                      className=" text-sm block rounded-lg px-4 py-2 font-medium hover:bg-gray-100 hover:text-gray-700"
-                                    >
-                                      Health Insurance
-                                    </Link>
-                                    <Link
-                                      href="/insurance/car"
-                                      className=" text-sm block rounded-lg px-4 py-2 font-medium hover:bg-gray-100 hover:text-gray-700"
-                                    >
-                                      Travel Insurance
-                                    </Link>
-                                    <Link
-                                      href="/insurance/car"
-                                      className=" text-sm block rounded-lg px-4 py-2  font-medium hover:bg-gray-100 hover:text-gray-700"
-                                    >
-                                      Life Insurance
-                                    </Link>
-                                  </li>
-                                </ul>
+                                  </>
+                                ))}
                               </details>
                             </li>
 
-                            <li>
-                              <Link
-                                href={"/"}
-                                className=" text-sm block rounded-lg px-4 py-2  font-medium text-gray-700"
-                              >
-                                Contact Us
-                              </Link>
-                            </li>
-
-                            <li>
-                              <Link
-                                href={"/"}
-                                className="text-sm block rounded-lg px-4 py-2  font-medium text-gray-700"
-                              >
-                                About Us
-                              </Link>
-                            </li>
-
-                            <li>
-                              <Link
-                                href={"/"}
-                                className=" text-sm block rounded-lg px-4 py-2 font-medium text-gray-700"
-                              >
-                                FAQs Us
-                              </Link>
-                            </li>
+                            {navLinks.map((links) => (
+                              <>
+                                <Link
+                                  href={links.href}
+                                  className=" hover:text-blue-500  block"
+                                >
+                                  {links.label}
+                                </Link>
+                              </>
+                            ))}
                           </ul>
                         </div>
 
                         <div className="sticky inset-x-0 bottom-0 border-t border-gray-100 mb-5">
                           {/* Email  */}
                           <div className="flex items-center ">
-                            <Link href={"/"}>
-                              <Image
+                            <Image
                               alt="mail_icon"
-                                src={Mail}
-                                className="  w-14 text-blue-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                              />
-                            </Link>
-                            <p className="text-xs font-sans font-semibold">
+                              src={Mail}
+                              className=" w-14 text-blue-600 "
+                            />
+
+                            <p className="text-xs font-sans font-semibold text-black">
                               Email Us <br />
                               Info@theoneclickdigital.com
                             </p>
@@ -278,18 +249,16 @@ function Header() {
 
                           {/* COntact  */}
                           <div className="flex items-center">
-                            <Link href={"/"}>
-                              <Image
+                            <Image
                               alt="phone_icon"
-                                src={Phone}
-                                className="w-14 text-blue-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                              />
-                            </Link>
-                            <p className="text-xs font-sans font-semibold">
-                              Contact Us <br />
-                              +92 333 242 5588
-                              <br />
-                              +92 333 828 7111
+                              src={Phone}
+                              className="w-14 text-blue-600 "
+                            />
+
+                            <p className="text-xs text-black font-sans font-semibold block">
+                              Contact Us
+                              <span className="block">+92 333 242 5588</span>
+                              <span>+92 333 828 7111</span>
                             </p>
                           </div>
                         </div>
@@ -302,8 +271,6 @@ function Header() {
           </div>
         </div>
       </header>
-
-      {/* Test  */}
     </>
   );
 }

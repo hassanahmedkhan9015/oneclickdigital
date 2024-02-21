@@ -6,11 +6,11 @@ import "@/app/globals.css";
 function ConceptualSec() {
   return (
     <>
-      <div className="">
+      <div className="bg-conceptual">
         <div className="mx-auto max-w-3xl text-center mt-5 ">
           <h2 className="text-3xl  text-neutral-500 font-extrabold sm:text-4xl font-sans">
             The Core of
-            <span className="text-blue-500"> OneClickDigital</span>
+            <span className="text-blue-500"> Oneclick Digital</span>
           </h2>
 
           <p className="mt-4 text-gray-600 sm:text-md">

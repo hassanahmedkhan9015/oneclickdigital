@@ -22,14 +22,12 @@ const HeroMain = () => {
         {/* Card Part */}
         <div className="flex flex-col justify-center items-center lg:items-start">
           <div>
-            <p className="text-black text-2xl font-semibold font-sans">
-              Let&apos;s find the
-            </p>
-            <h1 className="text-4xl text-neutral-500 font-extrabold mt-3 font-sans">
-              Best <span className="text-blue-500">1ClickDigital Plan</span>
+            <h1 className="text-2xl text-neutral-500 font-extrabold mt-3 font-sans">
+              Hassle-Free Insurance Solutions at: <br />{" "}
+              <span className="text-blue-500 text-5xl">Oneclick Digital </span>
             </h1>
             <p className="mt-1 text-gray-600 font-sans font-semibold">
-              Pakistan&apos;s only Digital OneClickDigital Solution for All
+              Your Premier Online & Offline Insurance Marketplace in Pakistan.
             </p>
             <div className="block">
               {/* 4 cards  */}
